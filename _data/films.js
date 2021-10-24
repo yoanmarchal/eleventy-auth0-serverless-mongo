@@ -11,7 +11,7 @@ async function getFilms() {
 
 	const client = new MongoClient(url, { useUnifiedTopology: true });
   	await client.connect();
-  	const db = client.db('eleventy_demo');
+  	const db = client.db('db');
   	const films = db.collection('films');
 
 	const query = { "public": true };
